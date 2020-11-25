@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<!--Hudson David Mota Rodrigues & João Felipe Moreira Santos-->
+	<head>
+    	<meta charset="utf-8" lang="pt-br">
+    	<meta width="device-width" initial-scale="1.0">
+    	<title>Calculadora H&#981;F</title>
+
+    	<link rel="stylesheet" href="css/style.css"/>
+    	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+   </head>
+    <!--BODY-->
+   <body id="corpo">
+    	<!--CONTAINER-->
+    	<div class="container-fluid">
+    		<!--LINHA-->
+    		<div class="row">
+    			<!--IMAGEM & ÁUDIO-->
+	    		<div id="img" class="col-sm-12">
+	    			<!--CARROSEL-->
+	    			<div id="carouselSite" data-interval="1500" class="carousel slide" data-ride="carousel">
+	    				<!--INDICADORES DO CARROSEL-->
+	    				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  						<ol class="carousel-indicators">
+							    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							 </ol>
+		    				<div class="carousel-inner">
+		    					<!--IMAGENS DO CARROSEL-->
+		    					<div class="carousel-item active" id="img1">
+		    						<img src="img/mina.png" class="img-fluid d-block" alt="mina">
+		    					</div>
+		    					
+		    					<div class="carousel-item" id="img2">
+		    						<img src="img/mina3.png" class="img-fluid d-block" alt="mina3">
+		    					</div>
+		    					
+		    					<div class="carousel-item" id="img3">
+		    						<img src="img/mina2.png" class="img-fluid d-block" alt="mina2">
+		    					</div>
+		    					<!--CONTROLES DO CARROSEL-->
+		    					<a class="carousel-control-prev" href="#carouselExampleIndicators" href="#carouselSite" role="button" data-slide="prev">
+		    						<span class="carousel-control-prev-icon"aria-hidden="true"></span>
+		    						<span class="sr-only">Anterior</span>
+		    					</a>
+
+		    					<a class="carousel-control-next" href="#carouselExampleIndicators" href="#carouselSite" role="button" data-slide="next">
+		    						<span class="carousel-control-next-icon"aria-hidden="true"></span>
+		    						<span class="sr-only">Anterior</span>
+		    					</a>
+		    				</div>
+	    				</div>
+	    			</div>
+	    			<!--ÁUDIO-->
+	    			<div>
+		    			<audio id="music" controls="controls" preload="auto">
+		    				<source src="msc/minato.mp3" type="audio/mpeg">
+		    					Desculpe, mas não foi possivel carregar o áudio.
+		    			</audio>
+		    			<!--CONTROLES DE ÁUDIO-->
+		    			<p>
+		    				<button onclick="setHalfVolume()" type="button"> 20% </button>
+		    				<button onclick="setHalf2Volume()" type="button"> 50% </button>
+		    				<button onclick="setFullVolume()" type="button"> 100% </button>
+			    			<script>
+			    				var x = document.getElementById("music");
+			    				function setHalfVolume() { 
+			    					x.volume = 0.2;
+			    				}
+			    				function setHalf2Volume() { 
+			    					x.volume = 0.5;
+			    				}
+			    				function setFullVolume() { 
+			    					x.volume = 1.0;
+			    				}
+			    			</script>
+		    			</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<!--LINHA-->
+	    	<div class="row">
+	    		<div id="azul" class="col-sm-12">
+	    			<font id="fonte">
+	    				<h1 id ="gp">Hudson & Felipe CALC</h1>
+	    			</font>
+	    		</div>
+	    	</div>
+	    	<!--CALCULADORA-->
+	        <div class="box">
+	        	<!--CAMPO DE DIGITOS-->
+	            <form name='form'>
+	                <input type="text" name='textbox' id="campo"/>
+	            </form>
+	            <!--TABELA DE NÚMEROS-->
+	            <table id="tb">
+	                <tr class='numbers'>
+	                    <td><input type='button' value='C' class='buttons' onclick='clean()'></td> 
+	                    <td><input type='button' value='↩' class='buttons' onclick='back()'></td>
+	                    <td><input type='button' value='-' class='buttons' onclick='insert("-")'></td>
+	                    <td><input type='button' value='+' class='buttons' onclick='insert("+")'></td>
+		            </tr>
+			        <tr class='numbers'>
+		                <td><input type="button" value='1' class='buttons' onclick="insert(1)"></td>
+		                <td><input type='button' value='2' class='buttons' onclick="insert(2)"></td>
+		                <td><input type='button' value='3' class='buttons' onclick="insert(3)"></td>
+		                <td><input type='button' value='/' class='buttons' onclick='insert("/")'></td>
+		            </tr>
+		            <tr class='numbers'>
+		                <td><input type='button' value='4' class='buttons' onclick='insert(4)'></td>
+		                <td><input type='button' value='5' class='buttons' onclick='insert(5)'></td>
+		                <td><input type='button' value='6' class='buttons' onclick='insert(6)'></td>
+		                <td><input type='button' value='*' class='buttons' onclick='insert("*")'></td>
+		            </tr>
+		            <tr class='numbers'>
+		                <td><input type='button' value='7' class='buttons' onclick='insert(7)'></td>
+		                <td><input type='button' value='8' class='buttons' onclick='insert(8)'></td>
+		                <td><input type='button' value='9' class='buttons' onclick='insert(9)'></td>
+		                <td><input type='button' value='=' class='buttons' onclick='total()'></td>
+		                </tr>
+		            <tr class='numbers'>
+		                <td><input type='button' value='.' class='buttons' onclick='insert(".")'></td>
+		                <td><input type='button' value='0' class='buttons' onclick='insert(0)'></td>
+		            </tr>	
+	            </table>
+	            <!--RODAPÉ-->
+	            <font color="#fff">
+	            	<p align="center" id="rodape">
+	            		Developed&reg; 2020 - By <b><i>Hudson</i></b>&#9835; & <b><i>Felipe</i></b>&#10672;
+	            	</p>
+	            </font>
+	        </div>
+	    </div>
+	</body>
+</html>

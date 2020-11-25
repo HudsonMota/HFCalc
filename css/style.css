@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/*BODY*/
+#corpo{
+	background-color: #00f;
+}
+
+/*DIV CONTAINTER*/
+.container-fluid{
+    background-color: #00f;
+    min-height: 1700px;
+}
+/*DIV LINHA*/
+.row{
+	margin-left: 120px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/*IMAGEM 1*/
+#img1{
+	margin-top: -15px;
+	margin-left: 100px;
+	width: 900px; 
+	height: 700px;
+}
+/*IMAGEM 2*/
+#img2{
+	margin-top: -15px;
+	margin-left: 150px;
+	width: 800px;
+	height: 700px;
+}
+/*IMAGEM 3*/
+#img3{
+	margin-top: -45px;
+	margin-left: 200px;
+	width: 800px;
+	height: 730px;
+}
+/*IMAGENS DO CARROSEL*/
+.carousel-inner{
+	margin-left: 120px;
+}
+/*BOTÃO ANTERIOR DO CARROSEL*/
+.carousel-control-prev{
+	margin-left: -70px;
+}
+/*BOTÃO PRÓXIMO DO CARROSEL*/
+.carousel-control-next{
+	margin-right: 120px;
+	display: none;
+}
+
+/*CONTROLES DA MÚSICA*/
+audio#musica{
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+/*DIV LINHA(ONDE FICA OS NOMES)*/
+#azul{
+	background-color: rgba(10, 0, 77,1);
+	min-height: 100px;
+}
+/*FONTE DOS NOMES*/
+#fonte{
+	font-family: 'Permanent Marker', cursive;	
+	font-size: 30pt;
+}
+/*EQUIPE*/
+#gp{
+	color: #FFD700;
+	margin-top: 10px;
+	font-size: 46pt;
+}
+
+/*CALCULADORA*/
+.box {
+	width: 335px;
+	height: 540px;
+	margin-left: 500px;
+	margin-top: 20px;
+	background: #000080;
+}
+/*CAMPO DE DIGITOS DA CALCULADORA*/
+#campo{	
+	width: 325px;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: #fff;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+	padding:15px;
+	color: #000;
+	font-family: 'Permanent Marker', cursive;
+}
+/*BOTÕES DA CALCULADORA*/
+.buttons{
+	font-size: 30px;
+	width: 67px;
+	height: 80px;
+	margin-bottom: 5px;
+	margin-right: 7.5px;
+	margin-top: 8px;
+	margin-left: 7px;
+	font-family: 'Permanent Marker', cursive;
+	color: #FFD700;
+	font-weight: bolder;
+	background-color: #000;
+}
+/*NÚMEROS DA CALCULADORA*/
+.numbers{
+	background-color: #000080;
+	color: #ff0;
+}
+
+/*RODAPÉ FINAL*/
+#rodape{
+	margin-top: 10px;
+}
